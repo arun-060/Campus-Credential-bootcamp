@@ -157,8 +157,51 @@
 # print(mod.pi)
 # mod.welcome('prashant','jha')
 
-from module1 import pi,square,login
+# from module1 import *
 
-print(pi)
-square(4)
-login("user","user")
+# print(pi)
+# square(4)
+# login("user","user")
+
+# from math import *
+
+# print(int(sqrt(16)))
+# print(ceil(10.1))
+# print(floor(10.1))
+# print(fabs(-10.6))
+# print(fabs(10.6))
+
+from random import *
+
+# for i in range(5):
+#     print(random())
+    
+# # to generate random number between 2 numbers
+# for i in range(5):
+#     print(randint(1,100000))
+
+# # to return a random float number    
+# for i in range(5):
+#     print(uniform(1,10))
+    
+# to return a random element form list
+# list = ["pprashant", "rahul", "ashish", "sandip", "sunil"]
+# for i in range(10):
+#     print(choice(list))
+    
+# l = [
+#     [100,198,323,333],
+#     [122,232,221,111],
+#     [223,565,245,764]
+# ]
+# newlist=[]
+# for i in range(3):
+#     j = 0
+#     max = l[i][j]
+#     for j in range(4):
+#         c_max = l[i][j]
+#         if max < c_max:
+#             max = c_max
+#     newlist.append(max)
+    
+# print(newlist)
