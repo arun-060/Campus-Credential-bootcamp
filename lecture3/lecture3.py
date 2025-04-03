@@ -205,3 +205,132 @@ from random import *
 #     newlist.append(max)
     
 # print(newlist)
+
+''''
+Exception handling
+'''
+
+# try :
+#     a = int(input("Enter the first value : "))
+#     b = int(input("Enter the second value : "))
+#     print(a/b)
+# except (ZeroDivisionError, ValueError) as message:
+#     print(message)
+# else :
+#     print("this are no errors in try block")
+# finally:
+#     print("I will always execute")
+    
+# try:
+#     a = int(input("Enter the first value : "))
+#     b = int(input("Enter the second value : "))
+#     try:
+#         print(a/b)
+#     except ZeroDivisionError as msg:
+#         print(msg)
+# except ValueError as msg:
+#     print(msg)
+
+# n = '1122334455'
+# key = 0
+
+# for i in n:
+#     if n.count(i) > 1:
+#         key += 1/n.count(i)
+
+# print(int(key))
+
+'''
+File handling in python
+methods :
+    open() to open the file along with the mode such as w for write, r for read, a for append
+    write() to update the file content if mode is write data will be overridden if the mode is append data will be added
+    close() to close the file 
+    readable() to check weather the file is readable or not
+    writable() to check weather the file is writable or not 
+    closed to check weather the the file is closed or not
+    user writelines to write into the file with w as a mode
+'''
+
+# f = open("myfile.txt","w")
+# print("name of the file : ",f.name)
+# print("file mode        : ", f.mode)
+# print("readable         :",f.readable())
+# print("writable         :",f.writable())
+# print("file close       :",f.closed)
+# f.close()
+# print("file closed      :", f.closed)
+
+# mylist = ("prashant","mahesh","suresh")
+# mydict = {
+#     1:"Ironman",
+#     2:"spiderman",
+#     3:"thor",
+#     4:"Batman"
+# }
+# f = open("myfile.txt","w")
+# f.writelines(str(mydict))
+# # print(f.readline())
+# f.close()
+
+# f = open("myfile.txt", "r")
+# print(f.read())
+# f.close()
+
+# with open("myfile.txt",'w') as f:
+#     f.write("amit\n")
+#     f.write("ashish\n")
+#     f.write("Prashant\n")
+#     print("File closed : ", f.closed)
+# print("File closed : ", f.closed)
+
+# with open("myfile.txt", "r") as f:
+#     content = f.read()
+#     print(content)
+
+# f1 = open("blackhole.jpg", "rb")
+# f2 = open("new_blackhole.jpg", "wb")
+
+# data = f1.read()
+# f2.write(data)
+# print("New image is available with the name : ", f2.name)
+
+import csv
+
+f = open("student.csv", "a", newline='')
+a = csv.writer(f)
+# a.writerow(["studentId", "rollno", "name","mobile no", "email id", "p1",'p2','p3', "total",'percentage', "result"])
+# studentId = int(input("Enter student id : "))
+# rollno = int(input("Enter your roll no : "))
+# name = input("Enter the name : ")
+# mobile_no = int(input("Enter mobile number : "))
+# email = input("Enter email : ")
+# p1 = int(input("Enter paper 1 marks : "))
+# p2 = int(input("Enter paper 2 marks : "))
+# p3 = int(input("Enter paper 3 marks : "))
+# total = p1+p2+p3
+# percentage = total/3
+
+# if p1 > 40 and p2 > 40 and p3 > 40:
+#     result="pass"
+# else:
+#     result="fail"
+# a.writerow([studentId, rollno, name,mobile_no, email, p1,p2,p3,total,percentage,result])
+# print("Changes made")
+f1 = open("student.csv", 'r')
+b = csv.reader(f1)
+data = []
+
+for r in b:
+    data.append(r)
+    
+Id = input("Enter the Id for search : ")
+student_data=[]
+for i in data:
+    if i[0] == Id:
+        student_data=i
+        
+for i in range(len(student_data)):
+    print(student_data[i], end="  ")
+        
+f1.close()
