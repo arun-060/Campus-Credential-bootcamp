@@ -231,14 +231,14 @@ Exception handling
 # except ValueError as msg:
 #     print(msg)
 
-# n = '1122334455'
-# key = 0
+n = '1122334455'
+key = 0
 
-# for i in n:
-#     if n.count(i) > 1:
-#         key += 1/n.count(i)
+for i in n: 
+    if n.count(i) > 1:
+        key += 1/n.count(i)
 
-# print(int(key))
+print(int(key))
 
 '''
 File handling in python
