@@ -422,9 +422,21 @@ method overriding
 # for i in sorted(dict):
 #     print(dict[i])
 
-rec = {'name':"python","age":20}
-id1 = id(rec)
-del rec
-rec = {'name':"python","age":20}
-id2 = id(rec)
-print(id1 == id2)
+# rec = {'name':"python","age":20}
+# id1 = id(rec)
+# del rec
+# rec = {'name':"python","age":20}
+# id2 = id(rec)
+# print(id1 == id2)
+
+class Student:
+    @staticmethod
+    def get_personal_detail(firstname,lastname):
+        print("your personal detail=",firstname,lastname)
+    
+    @staticmethod
+    def contact_detail(mobile_no,rollno):
+        print("your contact detail=",mobile_no,rollno)
+        
+Student.get_personal_detail("prashant","jha")
+Student.contact_detail(4859874523,101)
