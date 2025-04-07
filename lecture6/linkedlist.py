@@ -37,13 +37,17 @@ class LinkedList:
             
     def addNodeAtPos(self,value,position):
         node = Node(value)
-        current = self.head
-        i = position-1
-        while i != 0:
-            current = current.next
-            i -= 1
-        node.next = current.next
-        current.next = node
+        if self.head is None:
+            self.head=node
+            self.tail=node
+        else : 
+            current = self.head
+            i = position-1
+            while i != 0:
+                current = current.next
+                i -= 1
+            node.next = current.next
+            current.next = node
         
 if __name__ == "__main__":
     object = LinkedList()
